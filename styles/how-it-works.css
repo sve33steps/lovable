@@ -1,0 +1,66 @@
+#how-it-works { background: var(--gray-100); }
+#how-it-works .grid-content { padding: 24px; }
+.how-header { margin-bottom: 32px; }
+.how-title { font-size: 48px; font-weight: 600; color: var(--black); line-height: 1.2; margin-bottom: 8px; }
+.how-sub { font-size: 24px; font-weight: 600; color: var(--gray-700); line-height: 1.6; max-width: 741px; }
+.how-cards {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  padding: 23px 30px;
+  background: color-mix(in srgb, #1aabb0 8%, #FCFFFF);
+  isolation: isolate;
+}
+.how-cards-video {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50%;
+  height: 200%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 1;
+  pointer-events: none;
+  z-index: 0;
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 25%);
+  mask-image: linear-gradient(to right, transparent 0%, black 25%);
+}
+.video-hue-overlay {
+  position: absolute;
+  inset: 0;
+  background: #1AABB0;
+  mix-blend-mode: hue;
+  z-index: 1;
+  pointer-events: none;
+}
+.how-step {
+  position: relative; z-index: 2;
+  display: flex; gap: 16px; align-items: center;
+  padding: 8px;
+  background: rgba(242,242,242,0.75);
+  backdrop-filter: blur(4px);
+  border-radius: 20px;
+  margin-bottom: 16px;
+  max-width: 734px;
+}
+.how-step:last-child { margin-bottom: 0; }
+.how-icon {
+  width: 56px; height: 56px; flex-shrink: 0;
+  background: white;
+  border-radius: 12px;
+  border: 1px solid #d5d7da;
+  box-shadow: 0 1px 2px rgba(10,13,18,0.05), inset 0 0 0 1px rgba(10,13,18,0.18), inset 0 -2px 0 rgba(10,13,18,0.05);
+  display: flex; align-items: center; justify-content: center;
+}
+.how-icon img { width: 28px; height: 28px; object-fit: contain; }
+.how-step-text { font-size: 24px; font-weight: 600; color: var(--black); line-height: 1.2; }
+.how-step-text span { color: var(--gray-700); font-weight: 600; }
+
+@media (max-width: 768px) {
+  #how-it-works .grid-content { padding: 24px 16px; }
+  .how-title  { font-size: 36px; }
+  .how-sub    { font-size: 20px; }
+  .how-step   { max-width: 100%; }
+  .how-cards  { padding: 24px 16px; }
+}

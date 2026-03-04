@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "33steps",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["serve", "-l", "3034", "."],
+      "port": 3034
+    }
+  ]
+}

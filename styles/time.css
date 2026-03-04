@@ -1,0 +1,22 @@
+#time { background: var(--white); }
+#time .grid-content { padding: 128px 24px; text-align: center; }
+.time-title  { font-size: 48px; font-weight: 600; color: var(--black); line-height: 1.2; margin-bottom: 64px; }
+.time-stats  { max-width: 574px; margin: 0 auto; }
+.time-big    { margin-bottom: 64px; }
+.time-number { font-size: 96px; font-weight: 500; color: var(--primary); line-height: 1; }
+.time-label  { font-size: 24px; font-weight: 600; color: var(--black); line-height: 1.2; margin-top: 8px; }
+.time-row    { display: flex; gap: 64px; justify-content: center; margin-bottom: 48px; }
+.time-stat   { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+.time-stat-number { font-size: 64px; font-weight: 500; color: var(--gray-700); line-height: 1; }
+.time-stat-label  { font-size: 24px; font-weight: 600; color: var(--black); line-height: 1.2; }
+.time-cta    { display: flex; justify-content: center; }
+
+@media (max-width: 768px) {
+  #time .grid-content { padding: 64px 24px; }
+  .time-title  { font-size: 36px; margin-bottom: 32px; }
+  .time-number { font-size: 96px; }
+  .time-big    { margin-bottom: 32px; }
+  .time-row    { gap: 24px; }
+  .time-stat-number { font-size: 48px; }
+  .time-stat-label  { font-size: 18px; }
+}

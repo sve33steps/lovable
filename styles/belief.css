@@ -1,0 +1,18 @@
+#belief {
+  background: radial-gradient(57.93% 59.94% at 50% 100%, #E6D5C2 0%, rgba(216, 203, 188, 0.00) 100%), #FBFBFB;
+}
+#belief .grid-content {
+  padding: 128px 24px 256px;
+  text-align: center;
+}
+.belief-inner { max-width: 912px; margin: 0 auto; }
+.belief-sub { font-size: 48px; font-weight: 600; color: var(--black); line-height: 1.2; margin-bottom: 8px; }
+.belief-main { font-size: 96px; font-weight: 500; color: var(--gray-700); line-height: 1; margin-bottom: 8px; }
+.belief-strike { font-size: 48px; font-weight: 500; color: var(--gray-700); text-decoration: line-through; line-height: 1; }
+
+@media (max-width: 768px) {
+  #belief .grid-content { padding: 64px 16px 96px; }
+  .belief-sub   { font-size: 36px; }
+  .belief-main  { font-size: 56px; }
+  .belief-strike { font-size: 32px; }
+}
