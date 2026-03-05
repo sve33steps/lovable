@@ -1,5 +1,5 @@
 footer { background: var(--white); border-top: 1px solid var(--gray-300); }
-.footer-inner { padding: 64px 0; }
+.footer-inner { padding: 4rem; }
 .footer-top {
   display: flex; justify-content: space-between; align-items: flex-start;
   margin-bottom: 64px;
@@ -43,13 +43,46 @@ footer { background: var(--white); border-top: 1px solid var(--gray-300); }
 .footer-built   { font-size: 16px; font-weight: 600; color: var(--gray-800); }
 
 @media (max-width: 768px) {
-  .footer-inner  { padding: 32px 0; }
-  .footer-top    { flex-direction: column; gap: 32px; }
-  .footer-email-form { width: 100%; }
-  .footer-wordmark   { padding: 24px 0; }
-  .footer-workshop-name { font-size: 24px; }
-  .footer-logo-text  { font-size: clamp(40px, 12vw, 80px); }
-  .footer-bottom { flex-direction: column; gap: 16px; text-align: center; }
+  .footer-inner        { padding: 32px 16px; }
+
+  /* Top row → stacked, centered */
+  .footer-top          { flex-direction: column; align-items: center; gap: 8px; margin-bottom: 24px; }
+  .footer-left         { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 24px; }
+  .footer-copyright    { margin-bottom: 0; }
+  .footer-contact      { align-items: center; }
+  .footer-right        { width: 100%; padding-top: 24px; }
+  .footer-signup-label { text-align: center; }
+
+  /* Email form → vertical card */
+  .footer-email-form {
+    flex-direction: column;
+    width: 100%;
+    border-radius: 32px;
+    background: var(--white);
+    box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.10);
+    padding: 12px;
+    gap: 16px;
+    align-items: stretch;
+  }
+  .footer-email-input {
+    font-size: 20px;
+    line-height: 1.6;
+    padding: 0 8px;
+  }
+  .footer-email-form .btn {
+    width: 100%;
+    justify-content: center;
+    padding: 16px 24px;
+    font-size: 15px;
+    border-radius: 50px;
+  }
+
+  /* Wordmark block */
+  .footer-wordmark      { display: flex; flex-direction: column; align-items: center; gap: 24px; padding: 24px 0; margin-bottom: 24px; }
+  .footer-workshop-name { font-size: 36px; text-align: center; margin-bottom: 0; }
+
+  /* Bottom links */
+  .footer-bottom { flex-direction: column; align-items: center; gap: 24px; text-align: center; }
   .footer-links  { flex-direction: column; align-items: center; gap: 8px; }
   .footer-sep    { display: none; }
 }

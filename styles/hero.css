@@ -86,7 +86,7 @@
   .hero-ctas     { flex-direction: column; gap: 16px; align-items: center; }
   .hero-cta-group { width: 200px; }
   .hero-cta-group:last-child { width: 200px; }
-  .logo-bar-side { display: none; }
-  .logo-bar-inner { overflow-x: auto; justify-content: flex-start; padding: 8px 16px; gap: 8px; }
+  .logo-bar-side { width: 16px; }
+  .logo-bar-inner { flex-wrap: wrap; justify-content: center; padding: 8px 16px; gap: 8px; }
   .logo-slot     { height: 28px; padding: 0 0.5rem; }
 }

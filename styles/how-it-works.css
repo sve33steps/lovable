@@ -61,6 +61,26 @@
   #how-it-works .grid-content { padding: 24px 16px; }
   .how-title  { font-size: 36px; }
   .how-sub    { font-size: 20px; }
-  .how-step   { max-width: 100%; }
-  .how-cards  { padding: 24px 16px; }
+
+  /* Video fills the full card, centered */
+  .how-cards-video {
+    right: auto; left: 0; top: 0;
+    transform: none;
+    width: 100%; height: 100%;
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+
+  /* Steps: icon on top, text below, left-aligned */
+  .how-cards {
+    padding: 24px 16px;
+    display: flex; flex-direction: column; gap: 24px;
+  }
+  .how-step {
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 100%;
+    margin-bottom: 0;
+  }
+  .how-step-text { font-size: 20px; }
 }

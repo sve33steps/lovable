@@ -26,8 +26,17 @@
 
 @media (max-width: 768px) {
   #topics .grid-content { padding: 24px 0; }
-  .topics-title { font-size: 36px; padding: 0 16px; }
-  .topics-sub   { font-size: 20px; padding: 0 16px; margin-bottom: 24px; }
-  .ticker-item  { font-size: 32px; }
-  .ticker-sep   { font-size: 32px; }
+
+  /* Left-align header on mobile */
+  .topics-header { text-align: left; padding: 0 16px; margin-bottom: 24px; }
+  .topics-title  { font-size: 30px; }
+  .topics-sub    { font-size: 18px; }
+
+  /* Halve the fade overlay width (200px → 100px) so more words show */
+  .ticker-container::before,
+  .ticker-container::after { width: 100px; }
+
+  /* Smaller text = more words visible per row */
+  .ticker-item  { font-size: 20px; padding: 0 10px; }
+  .ticker-sep   { font-size: 20px; }
 }
