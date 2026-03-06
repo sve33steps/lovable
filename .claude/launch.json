@@ -3,8 +3,8 @@
   "configurations": [
     {
       "name": "33steps",
-      "runtimeExecutable": "npx",
-      "runtimeArgs": ["serve", "-l", "3034", "."],
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev", "--", "--port", "3034", "--host"],
       "port": 3034
     }
   ]

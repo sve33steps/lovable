@@ -1,3 +1,11 @@
+# Dependencies & build output — never commit these
+node_modules/
+dist/
+
+# macOS / editor
 .DS_Store
 Thumbs.db
 *.log
+
+# Environment & runtime config — contains API keys, never commit
+.env
