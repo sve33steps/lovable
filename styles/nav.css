@@ -17,7 +17,7 @@
   padding: 8px 8px 8px 16px;
   width: 492px;
 }
-.nav-logo { display: flex; align-items: center; }
+.nav-logo { display: flex; align-items: center; text-decoration: none; }
 .nav-logo img { height: 34px; width: 151px; display: block; object-fit: contain; object-position: left center; }
 
 @media (max-width: 768px) {

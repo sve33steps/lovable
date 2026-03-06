@@ -2,6 +2,7 @@
   position: relative;
   overflow: hidden;
   background: var(--gray-100);
+  scroll-margin-top: 80px;
 }
 #newsletter .grid-side {
   backdrop-filter: blur(6px);
