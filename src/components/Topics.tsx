@@ -9,10 +9,12 @@ export default function Topics() {
 
     items.forEach((item) => {
       const text = item.textContent || ''
+      item.setAttribute('aria-label', text) // preserve for screen readers after DOM manipulation
       item.textContent = ''
       Array.from(text).forEach((char) => {
         const span = document.createElement('span')
         span.className = 'topic-letter'
+        span.setAttribute('aria-hidden', 'true')
         span.textContent = char
         item.appendChild(span)
         allLetters.push(span)

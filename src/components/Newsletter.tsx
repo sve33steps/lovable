@@ -1,12 +1,12 @@
 import { useKitForm } from '../hooks/useKitForm'
 
 const IconCheck = () => (
-  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" style={{ flexShrink: 0 }}>
+  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" style={{ flexShrink: 0 }} aria-hidden="true">
     <path d="M2.5 8.5L6.5 12.5L13.5 4.5" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"/>
   </svg>
 )
 const IconCross = () => (
-  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" style={{ flexShrink: 0 }}>
+  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" style={{ flexShrink: 0 }} aria-hidden="true">
     <path d="M4 4L12 12M12 4L4 12" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round"/>
   </svg>
 )
@@ -26,7 +26,7 @@ export default function Newsletter() {
 
   return (
     <section id="newsletter" style={{ position: 'relative', overflow: 'hidden' }}>
-      <video className="bg-video" autoPlay loop muted playsInline>
+      <video className="bg-video" autoPlay loop muted playsInline aria-hidden="true">
         <source src="/assets/videos/Newsletter-video.webm" type="video/webm" />
         <source src="/assets/videos/Newsletter-video.mp4" type="video/mp4" />
       </video>
@@ -46,11 +46,14 @@ export default function Newsletter() {
                 value={email}
                 onChange={e => setEmail(e.target.value)}
                 onKeyDown={handleKeyDown}
+                aria-label="Your email address"
               />
               <button
                 className={btnClass}
                 onClick={state === 'error' ? () => { reset(); } : submit}
                 disabled={state === 'sending' || state === 'subscribed' || state === 'already'}
+                aria-live="polite"
+                aria-atomic="true"
               >
                 {btnContent()}
               </button>

@@ -1,7 +1,9 @@
+import { FEATURES } from '../features'
+
 export default function Hero() {
   return (
     <section id="hero">
-      <video className="bg-video" autoPlay loop muted playsInline>
+      <video className="bg-video" autoPlay loop muted playsInline aria-hidden="true">
         <source src="/assets/videos/hero-video.webm" type="video/webm" />
         <source src="/assets/videos/hero-video.mp4" type="video/mp4" />
       </video>
@@ -35,18 +37,20 @@ export default function Hero() {
         <div className="hero-side right"></div>
       </div>
 
-      <div id="logo-bar">
-        <div className="logo-bar-side"></div>
-        <div className="logo-bar-inner">
-          <span className="logo-bar-label">As seen on</span>
-          <div className="logo-slot"><img src="/assets/images/logos/logo-vdcc.svg" alt="VDCC" /></div>
-          <div className="logo-slot"><img src="/assets/images/logos/logo-revolut.svg" alt="Revolut" /></div>
-          <div className="logo-slot"><span className="logo-slot-text">mass<span style={{ opacity: 0.6 }}>[Currency]</span></span></div>
-          <div className="logo-slot"><img src="/assets/images/logos/logo-fiat-republic.svg" alt="Fiat Republic" /></div>
-          <div className="logo-slot"><img src="/assets/images/logos/logo-avalanche.svg" alt="Avalanche" /></div>
+      {FEATURES.heroLogoBar && (
+        <div id="logo-bar">
+          <div className="logo-bar-side"></div>
+          <div className="logo-bar-inner">
+            <span className="logo-bar-label">As seen on</span>
+            <div className="logo-slot"><img src="/assets/images/logos/logo-vdcc.svg" alt="VDCC" /></div>
+            <div className="logo-slot"><img src="/assets/images/logos/logo-revolut.svg" alt="Revolut" /></div>
+            <div className="logo-slot"><span className="logo-slot-text">mass<span style={{ opacity: 0.6 }}>[Currency]</span></span></div>
+            <div className="logo-slot"><img src="/assets/images/logos/logo-fiat-republic.svg" alt="Fiat Republic" /></div>
+            <div className="logo-slot"><img src="/assets/images/logos/logo-avalanche.svg" alt="Avalanche" /></div>
+          </div>
+          <div className="logo-bar-side right"></div>
         </div>
-        <div className="logo-bar-side right"></div>
-      </div>
+      )}
     </section>
   )
 }

@@ -1,4 +1,5 @@
 import { useEffect } from 'react'
+import { FEATURES } from './features'
 
 // CSS
 import './styles/global.css'
@@ -6,6 +7,7 @@ import './styles/nav.css'
 import './styles/hero.css'
 import './styles/steps.css'
 import './styles/belief.css'
+import './styles/in-media.css'
 import './styles/comparison.css'
 import './styles/how-it-works.css'
 import './styles/mission.css'
@@ -25,6 +27,7 @@ import Nav from './components/Nav'
 import Hero from './components/Hero'
 import Steps from './components/Steps'
 import Belief from './components/Belief'
+import InMedia from './components/InMedia'
 import Comparison from './components/Comparison'
 import HowItWorks from './components/HowItWorks'
 import Mission from './components/Mission'
@@ -119,24 +122,28 @@ export default function App() {
 
   return (
     <>
+      <a href="#main-content" className="skip-link">Skip to main content</a>
       <div style={{ maxWidth: '1440px', margin: '0 auto' }}>
         <Nav />
       </div>
-      <Hero />
-      <Steps />
-      <Belief />
-      <Comparison />
-      <HowItWorks />
-      <Mission />
-      <ForYou />
-      <Focus />
-      <Founder />
-      <Topics />
-      <Time />
-      <Guarantee />
-      <Newsletter />
-      <Testimonials />
-      <GetReal />
+      <main id="main-content">
+        <Hero />
+        <Steps />
+        <Belief />
+        {FEATURES.inMediaBar && <InMedia />}
+        <Comparison />
+        <HowItWorks />
+        <Mission />
+        <ForYou />
+        <Focus />
+        <Founder />
+        <Topics />
+        <Time />
+        <Guarantee />
+        <Newsletter />
+        {FEATURES.testimonials && <Testimonials />}
+        <GetReal />
+      </main>
       <Footer />
     </>
   )
