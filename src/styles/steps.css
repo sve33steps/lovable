@@ -102,6 +102,8 @@
   #steps .grid-content > div { padding: 16px !important; }
   .steps-eyebrow { font-size: 36px; }
   .steps-heading { font-size: 36px; }
-  .cards-grid { position: static !important; aspect-ratio: auto !important; height: auto !important; display: flex; flex-direction: column; gap: 8px; }
-  .card { position: relative !important; width: 100% !important; height: 300px !important; left: auto !important; top: auto !important; }
+  .cards-grid { position: static !important; aspect-ratio: auto !important; height: auto !important; display: flex; flex-direction: column; gap: 16px; }
+  .card { position: relative !important; width: 100% !important; height: 300px !important; left: auto !important; top: auto !important; transform: scale(0.97); }
+  .card:hover { transform: scale(0.97); } /* disable hover on mobile */
+  .card.card-active { transform: scale(1.03); z-index: 10; }
 }

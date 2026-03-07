@@ -1,4 +1,36 @@
+import { useEffect } from 'react'
+
 export default function Steps() {
+  useEffect(() => {
+    const mq = window.matchMedia('(max-width: 768px)')
+
+    function activate() {
+      if (!mq.matches) return
+      const cards = document.querySelectorAll<HTMLElement>('#steps .card')
+      const vhMid = window.innerHeight / 2
+      let closest: HTMLElement | null = null
+      let minDist = Infinity
+
+      cards.forEach(card => {
+        const rect = card.getBoundingClientRect()
+        const dist = Math.abs(rect.top + rect.height / 2 - vhMid)
+        if (dist < minDist) { minDist = dist; closest = card }
+      })
+
+      cards.forEach(card => card.classList.remove('card-active'))
+      if (closest) (closest as HTMLElement).classList.add('card-active')
+    }
+
+    window.addEventListener('scroll', activate, { passive: true })
+    window.addEventListener('resize', activate, { passive: true })
+    activate()
+
+    return () => {
+      window.removeEventListener('scroll', activate)
+      window.removeEventListener('resize', activate)
+    }
+  }, [])
+
   return (
     <section id="steps">
       <div className="grid-row">
